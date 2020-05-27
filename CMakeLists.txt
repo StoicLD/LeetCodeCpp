@@ -4,4 +4,4 @@ project(LeetCodeCpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LeetCodeCpp main.cpp Source/SolutionList1.cpp Header/SolutionList1.h Header/Test.h)
+add_executable(LeetCodeCpp main.cpp Header/Test.h Source/PossibleBipartition.cpp Source/UncrossedLines.cpp Source/ContiguousArray.cpp Header/ContiguousArray.h Header/UncrossedLines.h Header/PossibleBipartition.h)
