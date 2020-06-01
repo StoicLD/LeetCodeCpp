@@ -2,14 +2,15 @@
 // Created by lidong on 2020/5/30.
 //
 
-#ifndef LEETCODECPP_KCLOSESTPOINTSTOORIGIN_H
-#define LEETCODECPP_KCLOSESTPOINTSTOORIGIN_H
+#ifndef LEETCODECPP_KCLOSESTPOINTSTOORIGIN_973_H
+#define LEETCODECPP_KCLOSESTPOINTSTOORIGIN_973_H
 
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
+//TODO LeetCode 973
 class KClosestPointsToOrigin_973
 {
 public:
@@ -130,4 +131,4 @@ private:
 
 };
 
-#endif //LEETCODECPP_KCLOSESTPOINTSTOORIGIN_H
+#endif //LEETCODECPP_KCLOSESTPOINTSTOORIGIN_973_H

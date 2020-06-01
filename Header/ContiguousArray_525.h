@@ -2,11 +2,12 @@
 // Created by lidong on 2020/5/27.
 //
 
-#ifndef LEETCODECPP_CONTIGUOUSARRAY_H
-#define LEETCODECPP_CONTIGUOUSARRAY_H
+#ifndef LEETCODECPP_CONTIGUOUSARRAY_525_H
+#define LEETCODECPP_CONTIGUOUSARRAY_525_H
 #include <vector>
 #include <map>
 #include <algorithm>
+//TODO LeetCode 525
 class ContiguousArray_525
 {
 public:
@@ -35,4 +36,4 @@ public:
     }
 };
 
-#endif //LEETCODECPP_CONTIGUOUSARRAY_H
+#endif //LEETCODECPP_CONTIGUOUSARRAY_525_H

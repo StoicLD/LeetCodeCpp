@@ -2,8 +2,8 @@
 // Created by lidong on 2020/5/27.
 //
 
-#ifndef LEETCODECPP_UNCROSSEDLINES_H
-#define LEETCODECPP_UNCROSSEDLINES_H
+#ifndef LEETCODECPP_UNCROSSEDLINES_1035_H
+#define LEETCODECPP_UNCROSSEDLINES_1035_H
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -35,4 +35,4 @@ public:
 };
 
 
-#endif //LEETCODECPP_UNCROSSEDLINES_H
+#endif //LEETCODECPP_UNCROSSEDLINES_1035_H

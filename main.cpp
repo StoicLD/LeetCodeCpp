@@ -3,8 +3,8 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
-#include <KClosestPointsToOrigin.h>
-#include "Header/CourseSchedule.h"
+#include <KClosestPointsToOrigin_973.h>
+#include "Header/CourseSchedule_207.h"
 using namespace std;
 
 class myComparator

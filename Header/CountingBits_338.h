@@ -2,13 +2,13 @@
 // Created by lidong on 2020/5/28.
 //
 
-#ifndef LEETCODECPP_COUNTINGBITS_H
-#define LEETCODECPP_COUNTINGBITS_H
+#ifndef LEETCODECPP_COUNTINGBITS_338_H
+#define LEETCODECPP_COUNTINGBITS_338_H
 
 #include <vector>
 
 using namespace std;
-
+//TODO LeetCode 338
 class CountingBits_338
 {
 public:
@@ -50,4 +50,4 @@ public:
     }
 };
 
-#endif //LEETCODECPP_COUNTINGBITS_H
+#endif //LEETCODECPP_COUNTINGBITS_338_H
