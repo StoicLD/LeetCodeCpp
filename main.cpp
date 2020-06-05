@@ -31,17 +31,7 @@ public:
  * 同时头文件也是用using namespace std
  */
 int main() {
-
-    vector<vector<int>> vecs1{vector<int>{1,10}, vector<int>{1,2}, vector<int>{2,1}, vector<int>{11,2}};
-
-    vector<vector<int>> vecs2{vector<int>{1, -1}, vector<int>{1,3}, vector<int>{2, -2}, vector<int>{12, -2}, vector<int>{1, -1}};
-
-    KClosestPointsToOrigin_973 k;
-    auto result = k.kClosest(vecs2, 1);
-
-    for(auto vec : result)
-    {
-        cout << to_string(vec[0]) << " " << to_string(vec[1]) << endl;
-    }
+    const int ci = 3;
+    int i = 3;
     return 0;
 }
