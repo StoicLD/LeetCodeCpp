@@ -3,8 +3,8 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
-#include <KClosestPointsToOrigin_973.h>
 #include "Header/CourseSchedule_207.h"
+#include "Header/QueueReconstructionByHeight_406.h"
 using namespace std;
 
 class myComparator
@@ -31,7 +31,10 @@ public:
  * 同时头文件也是用using namespace std
  */
 int main() {
-    const int ci = 3;
-    int i = 3;
+    QueueReconstructionByHeight_408 q;
+    vector<pair<int,int>> vec{{7,0},{4,4},{5,0},{6,1},{5,2},{7,1}};
+    int m  = 2;
+    m <<= 2;
+    cout << m << endl;
     return 0;
 }
