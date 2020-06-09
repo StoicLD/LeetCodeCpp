@@ -3,8 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
-#include "Header/CourseSchedule_207.h"
-#include "Header/QueueReconstructionByHeight_406.h"
+#include "CoinChange2_528.h"
 using namespace std;
 
 class myComparator
@@ -31,10 +30,8 @@ public:
  * 同时头文件也是用using namespace std
  */
 int main() {
-    QueueReconstructionByHeight_408 q;
-    vector<pair<int,int>> vec{{7,0},{4,4},{5,0},{6,1},{5,2},{7,1}};
-    int m  = 2;
-    m <<= 2;
-    cout << m << endl;
+    CoinChange2_528 c;
+    vector<int> vec{1,2,5};
+    cout << c.change(5, vec);
     return 0;
 }
