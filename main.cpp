@@ -2,6 +2,9 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <list>
+#include <unordered_set>
+#include <unordered_map>
 #include <algorithm>
 #include "SortColors_75.h"
 using namespace std;
@@ -33,31 +36,28 @@ void printElement(Container& c)
     }
     cout << endl;
 }
+
+
+
 /*
  * 为了方便，函数的实现也写在头文件里面了
  * 同时头文件也是用using namespace std
  */
 int main() {
-    SortColors_75 s;
-    vector<int> nums1{2,1,0,0,1,2,2,1,1};
-    vector<int> nums2{2,2,1,1,0,0,1,2,2,1,1};
-    vector<int> nums3{1,0,1,2,1,0,0,1,2,2,1,1};
-    vector<int> nums4{2,2,0,1,1,0,0,1,2,2,1,1};
-    vector<int> nums5{1,0,2,0,1,0,0,1,2,2,1,1};
+    list<int> l;
+    unordered_map<int, list<int>::iterator> hashMap;
+    for(int i = 0; i < 10; i++)
+    {
+        l.push_front(i);
+        hashMap.insert(make_pair(i, l.begin()));
+    }
 
-    s.sortColors(nums1);
-    s.sortColors(nums2);
-    s.sortColors(nums3);
-    s.sortColors(nums4);
-    s.sortColors(nums5);
-
-
-
-    printElement(nums1);
-    printElement(nums2);
-    printElement(nums3);
-    printElement(nums4);
-    printElement(nums5);
-
+    auto itR = hashMap[3];
+    l.erase(itR);
+    hashMap.erase(3);
+    for(auto it : hashMap)
+    {
+        cout << it.first << "  " << *it.second << endl;
+    }
     return 0;
 }
