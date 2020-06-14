@@ -6,7 +6,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
-#include "SortColors_75.h"
+#include "LargestDivisibleSubset_368.h"
 using namespace std;
 
 class myComparator
@@ -44,20 +44,12 @@ void printElement(Container& c)
  * 同时头文件也是用using namespace std
  */
 int main() {
-    list<int> l;
-    unordered_map<int, list<int>::iterator> hashMap;
-    for(int i = 0; i < 10; i++)
+    LargestDivisibleSubset_368 l;
+    vector<int> vec{2,4,6,8,9,15,16,17,30};
+    auto result =  l.largestDivisibleSubset(vec);
+    for(auto i : result)
     {
-        l.push_front(i);
-        hashMap.insert(make_pair(i, l.begin()));
-    }
-
-    auto itR = hashMap[3];
-    l.erase(itR);
-    hashMap.erase(3);
-    for(auto it : hashMap)
-    {
-        cout << it.first << "  " << *it.second << endl;
+        cout << i << endl;
     }
     return 0;
 }
