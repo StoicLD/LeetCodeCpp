@@ -6,7 +6,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
-#include "LargestDivisibleSubset_368.h"
+#include "CheapestFlightsWithinKStops_787.h"
 using namespace std;
 
 class myComparator
@@ -44,12 +44,9 @@ void printElement(Container& c)
  * 同时头文件也是用using namespace std
  */
 int main() {
-    LargestDivisibleSubset_368 l;
-    vector<int> vec{2,4,6,8,9,15,16,17,30};
-    auto result =  l.largestDivisibleSubset(vec);
-    for(auto i : result)
-    {
-        cout << i << endl;
-    }
-    return 0;
+    CheapestFlightsWithinKStops_787 cf;
+    vector<vector<int>> vec{{0, 1, 100}, {1, 2, 100}, {0, 2, 500}};
+    cout << cf.findCheapestPrice(3, vec, 0 , 2, 1) << endl;
+    cout << cf.findCheapestPrice(3, vec, 0 , 2, 0) << endl;
+
 }
