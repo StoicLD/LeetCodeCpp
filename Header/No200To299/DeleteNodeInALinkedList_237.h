@@ -5,7 +5,7 @@
 #ifndef LEETCODECPP_DELETENODEINALINKEDLIST_237_H
 #define LEETCODECPP_DELETENODEINALINKEDLIST_237_H
 
-#include "ListNode.h"
+#include "Utils/ListNode.h"
 //TODO LeetCode 237
 class DeleteNodeInALinkedList_237 {
 public:

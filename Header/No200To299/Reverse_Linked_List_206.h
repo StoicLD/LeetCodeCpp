@@ -1,0 +1,12 @@
+//
+// Created by lidong on 2021/7/25.
+//
+
+#ifndef LEETCODECPP_REVERSE_LINKED_LIST_206_H
+#define LEETCODECPP_REVERSE_LINKED_LIST_206_H
+class Reverse_Linked_List_206 {
+
+
+};
+
+#endif //LEETCODECPP_REVERSE_LINKED_LIST_206_H

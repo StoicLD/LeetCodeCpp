@@ -5,7 +5,7 @@
 #ifndef LEETCODECPP_INVERTBINARYTREE_226_H
 #define LEETCODECPP_INVERTBINARYTREE_226_H
 //TODO LeetCode 226
-#include "TreeNode.h"
+#include "Utils/TreeNode.h"
 #include <queue>
 using namespace std;
 class InvertBinaryTree_226

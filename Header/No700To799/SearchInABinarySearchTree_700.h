@@ -5,7 +5,7 @@
 #ifndef LEETCODECPP_SEARCHINABINARYSEARCHTREE_700_H
 #define LEETCODECPP_SEARCHINABINARYSEARCHTREE_700_H
 #include <vector>
-#include "TreeNode.h"
+#include "Utils/TreeNode.h"
 using namespace std;
 //TODO Leetcode 700
 class SearchInABinarySearchTree_700
