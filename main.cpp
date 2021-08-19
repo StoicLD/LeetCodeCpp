@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <cassert>
-#include "No700To799/Design_Linked_List_707.h"
+#include "No400To499/Assign_Cookies_455.h"
 using namespace std;
 /*
  * 为了方便，函数的实现也写在头文件里面了
@@ -20,13 +20,11 @@ struct TestNode {
 
 int main()
 {
-    std::vector<vector<int>> input_vec1{{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+    Assign_Cookies_455 test;
+    vector<int> g1{11, 21, 31, 41};
+    vector<int> s1{1, 4, 30, 40};
+    cout << test.findContentChildren(g1, s1);
 //    Fruit_Into_Baskets_904 test;
 //    cout << test.totalFruit(input_vec1);
-    MyLinkedList test;
-    test.addAtIndex(0, 10);
-    test.addAtIndex(0, 20);
-    test.addAtIndex(1, 30);
-    test.get(0);
 
 }
