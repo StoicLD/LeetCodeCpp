@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <cassert>
-#include "No400To499/Assign_Cookies_455.h"
+#include "No300To399/Integer_Break_343.h"
 using namespace std;
 /*
  * 为了方便，函数的实现也写在头文件里面了
@@ -20,11 +20,6 @@ struct TestNode {
 
 int main()
 {
-    Assign_Cookies_455 test;
-    vector<int> g1{11, 21, 31, 41};
-    vector<int> s1{1, 4, 30, 40};
-    cout << test.findContentChildren(g1, s1);
-//    Fruit_Into_Baskets_904 test;
-//    cout << test.totalFruit(input_vec1);
-
+    Integer_Break_343 test;
+    cout << test.integerBreak(25);
 }
