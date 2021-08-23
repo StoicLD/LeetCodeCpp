@@ -25,6 +25,7 @@ public:
         int product = 1;
         while(n - 3 > 3)
         {
+
             product *= 3;
             n -= 3;
         }
