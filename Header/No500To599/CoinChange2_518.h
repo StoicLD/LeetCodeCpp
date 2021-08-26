@@ -7,13 +7,13 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-class CoinChange2_528
+class CoinChange2_518
 {
 public:
     int numOfChanges;
     int change(int amount, vector<int>& coins)
     {
-        vector<int> dp(amount, 0);
+        vector<int> dp(amount + 1, 0);
         dp[0] = 1;
         for(auto coin : coins)
         {
