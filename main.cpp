@@ -9,6 +9,9 @@
 #include <cassert>
 #include "No1To99/Unique_Binary_Search_Trees_96.h"
 #include "No600To699/Two_Sum4_Input_is_a_BST_653.h"
+#include "No300To399/Verify_Preorder_Serialization_of_a_Binary_Tree_331.h"
+#include "No600To699/Sum_of_Square_Numbers_633.h"
+#include "No1000To1099/Last_Stone_Weight2_1049.h"
 using namespace std;
 /*
  * 为了方便，函数的实现也写在头文件里面了
@@ -21,12 +24,7 @@ struct TestNode {
 
 int main()
 {
-    Two_Sum4_Input_is_a_BST_653 bst;
-    TreeNode root(5);
-    root.left = new TreeNode(3);
-    root.left->left = new TreeNode(2);
-    root.left->right = new TreeNode(4);
-    root.right = new TreeNode(6);
-    root.right->right = new TreeNode(7);
-    cout << bst.findTarget(&root, 9);
+    Last_Stone_Weight2_1049 test;
+    vector<int> vec{31,26,33,21,40};
+    cout << test.lastStoneWeightII2(vec);
 }
