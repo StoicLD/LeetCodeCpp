@@ -7,11 +7,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <cassert>
-#include "No1To99/Unique_Binary_Search_Trees_96.h"
-#include "No600To699/Two_Sum4_Input_is_a_BST_653.h"
-#include "No300To399/Verify_Preorder_Serialization_of_a_Binary_Tree_331.h"
-#include "No600To699/Sum_of_Square_Numbers_633.h"
-#include "No1000To1099/Last_Stone_Weight2_1049.h"
+#include "No800To899/Sum_of_Distances_in_Tree_834.h"
 using namespace std;
 /*
  * 为了方便，函数的实现也写在头文件里面了
@@ -24,7 +20,12 @@ struct TestNode {
 
 int main()
 {
-    Last_Stone_Weight2_1049 test;
-    vector<int> vec{31,26,33,21,40};
-    cout << test.lastStoneWeightII2(vec);
+    Sum_of_Distances_in_Tree_834 test;
+    vector<vector<int>> test_vec{{3,2},{0,1},{4,2},{0,2},{2,5}};
+    auto result = test.sumOfDistancesInTree2(6, test_vec);
+    for(auto i : result)
+    {
+        cout << "[" << i << "], ";
+    }
+
 }
