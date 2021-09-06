@@ -8,6 +8,9 @@
 #include <algorithm>
 #include <cassert>
 #include "No800To899/Sum_of_Distances_in_Tree_834.h"
+#include "No400To499/Target_Sum_494.h"
+#include "No100To199/Binary_Tree_Level_Order_Traversal_102 .h"
+#include "No800To899/Orderly_Queue_899.h"
 using namespace std;
 /*
  * 为了方便，函数的实现也写在头文件里面了
@@ -20,12 +23,7 @@ struct TestNode {
 
 int main()
 {
-    Sum_of_Distances_in_Tree_834 test;
-    vector<vector<int>> test_vec{{3,2},{0,1},{4,2},{0,2},{2,5}};
-    auto result = test.sumOfDistancesInTree2(6, test_vec);
-    for(auto i : result)
-    {
-        cout << "[" << i << "], ";
-    }
-
+    Orderly_Queue_899 test;
+    string s = "xitavoyjqiupzadbdyymyvuteolyeerecnuptghlzsynozeuuvteryojyokpufanyrqqmtgxhyycltlnusyeyyqygwupcaagtkuq";
+    cout << test.orderlyQueue(s, 1);
 }
