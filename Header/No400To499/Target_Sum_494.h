@@ -5,6 +5,8 @@
 #ifndef LEETCODECPP_HEADER_NO400TO499_TARGET_SUM_494_H_
 #define LEETCODECPP_HEADER_NO400TO499_TARGET_SUM_494_H_
 #include <algorithm>
+#include <vector>
+using namespace std;
 class Target_Sum_494 {
 public:
     int findTargetSumWays2(vector<int>& nums, int target) {
