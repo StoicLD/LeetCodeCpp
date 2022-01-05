@@ -5,53 +5,95 @@
 #include <list>
 #include <unordered_set>
 #include <unordered_map>
+#include <map>
 #include <algorithm>
 #include <cassert>
-#include "No200To299/Basic_Calculator_224.h"
-#include "No200To299/Expression_Add_Operators_282.h"
 using namespace std;
 /*
  * 为了方便，函数的实现也写在头文件里面了
  * 同时头文件也是用using namespace std
  */
 
-struct TestNode {
-    int val;
-};
+class Solution
+{
+public:
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites)
+    {
+        //(1) Construct a DAG
+        vector<vector<int> > graph(numCourses, vector<int>(numCourses, 0));
+        vector<int> degree(numCourses, 0);
+        for(auto& it : prerequisites)
+        {
+            graph[it[1]][it[0]] += 1;
+            degree[it[0]]++;
+        }
 
+        //(2) topological sort
+        vector<int> result;
+        list<int> tmp_list;
+
+        for(int i = 0; i < graph.size(); i++)
+        {
+            if(degree[i] == 0)
+            {
+                for(auto child : graph[i])
+                {
+                    degree[child]--;
+                    if(degree[child] == 0)
+                    {
+                        tmp_list.push_back(child);
+                    }
+                }
+                // graph.erase(it.first);
+                result.push_back(i);
+            }
+        }
+        while(!tmp_list.empty())
+        {
+            int next_course = tmp_list.front();
+            tmp_list.pop_front();
+            result.push_back(next_course);
+            for(auto it : graph[next_course])
+            {
+                degree[it]--;
+                if(degree[it] == 0)
+                {
+                    tmp_list.push_back(it);
+                }
+            }
+        }
+
+        return result.size() == numCourses ? result : vector<int>{};
+    }
+};
+/**
+ * Your FileSystem object will be instantiated and called as such:
+ * FileSystem* obj = new FileSystem();
+ * vector<string> param_1 = obj->ls(path);
+ * obj->mkdir(path);
+ * obj->addContentToFile(filePath,content);
+ * string param_4 = obj->readContentFromFile(filePath);
+ */
 int main()
 {
-    Expression_Add_Operators_282 test;
-    auto result = test.addOperators("123456789", 45);
-    for(auto s : result)
-    {
-        cout << s << endl;
-    }
-    // string s1 = "1 + 3";                // 4
-    // string s2 = "-1 + (3 -1 )";         // 1
-    // string s3 = "3 + 5* 4 -2+8/2";      // 25
-    // string s4 = "5-6*(3*4 + 7)";        // -109
-    // string s5 = "3 + (-4 + 3 * (5 + 7 - (2*3)) - 4)";               // 13
-    // string s6 = "-3 + 4 - (1 + 3 - (4 - 2) - (10 - 3))";            // 6
-    // string s7 = " 2-1 + 2 ";
-    // string s8 = "-(-(-1))";
-    // string s9 = "-((-1))";
-    // string s10 = "1-((-1))";
-    // string s11 = "1*2-3/4+5*6-7*8+9/10";        // -24
-    // string s12 = "1*2-3/4+5*6";        // 32
-    // Basic_Calculator_224 test; 
-    // cout << (test.calculate(s1) == 4) << endl;
-    // cout << (test.calculate(s2) == 1) << endl;
-    // cout << (test.calculate(s3) == 25) << endl;
-    // cout << (test.calculate(s4) == -109) << endl;
-    // cout << (test.calculate(s5) == 13) << endl;
-    // cout << (test.calculate(s6) == 6) << endl;
-    // cout << (test.calculate(s7) == 3) << endl;
+    FileSystem f;
+    f.ls("/");
+    f.mkdir("/goowmfn");
+    f.ls("/goowmfn");
+    f.ls("/goowmfn");
+    f.mkdir("/z");
+    f.ls("/z");
+    f.ls("/z");
+    f.addContentToFile("/goowmfn/c", "shetopcy");\
+    f.ls("/z");
+    auto result = f.ls("/goowmfn/c");
+    f.ls("/goowmfn");
 
-    // cout << (test.calculate(s8) == -1) << endl;
-    // cout << (test.calculate(s9) == 1) << endl;
-    // cout << (test.calculate(s10) == 2) << endl;
-    // cout << (test.calculate(s11) == -24) << endl;
-    // cout << (test.calculate(s12) == 32) << endl;
-    // assert(test.calculate(s3) == 4);
+    for(auto it : result)
+    {
+        cout << it << endl;
+    }
+
+//    ["FileSystem","mkdir","ls","ls","mkdir","ls","ls","addContentToFile","ls","ls","ls"]
+//    [[],["/goowmfn"],["/goowmfn"],["/"],["/z"],["/"],["/"],["/goowmfn/c","shetopcy"],["/z"],["/goowmfn/c"],["/goowmfn"]]
 }
